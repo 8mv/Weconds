@@ -191,7 +191,7 @@ public class MainActivity extends AppCompatActivity {
         alterDiaglog.setMessage("Weconds获取悬浮窗权限之后将时分秒小浮窗显示在其他App上层，并且以0.1秒为周期获取手机的系统时间。(当前版本号 V3.0)\n\n" +
                 "Weconds不涉及任何联网行为，也不会读取任何无关文件，请放心使用。\n\n" +
                 "如有问题请联系邮箱：ghcony@qq.com\n\n" +
-                "本项目已开源，如有兴趣请前往 https://github.com/qqdm 获取项目。\n\n" +
+                "本项目已开源，如有兴趣请前往 https://github.com/omcc/Weconds 获取项目。\n\n" +
                 "By：王探长工作室(官网：wt3.cn)");//提示消息
         //积极的选择
         alterDiaglog.setPositiveButton("复制邮箱地址", new DialogInterface.OnClickListener() {
@@ -209,7 +209,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int which) {
 
                 ClipboardManager cm = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-                ClipData clip = ClipData.newPlainText("clip", "https://github.com/qqdm");
+                ClipData clip = ClipData.newPlainText("clip", "https://github.com/omcc/Weconds");
                 cm.setPrimaryClip(clip);
                 Toast.makeText(MainActivity.this, "请粘贴到浏览器访问", Toast.LENGTH_SHORT).show();
             }

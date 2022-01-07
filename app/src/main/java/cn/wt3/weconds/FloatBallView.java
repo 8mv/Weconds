@@ -77,7 +77,7 @@ public class FloatBallView {
         params.gravity = Gravity.TOP | Gravity.LEFT;
         int screenWidth = context.getResources().getDisplayMetrics().widthPixels;
         int screenHeight = context.getResources().getDisplayMetrics().heightPixels;
-        params.y = screenHeight - height / 3;//设置距离底部高度为屏幕三分之一
+        params.y = screenHeight - (4 * height) / 5;//设置距离底部高度为屏幕五分之四
         params.x = screenWidth;
         view.setBackgroundColor(Color.TRANSPARENT);
         view.setVisibility(View.VISIBLE);
