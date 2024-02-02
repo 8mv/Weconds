@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Weconds</string>
-    <string name="hometitle">Weconds 是一个显示秒数的工具</string>
+    <string name="hometitle">Weconds 是一个显示毫秒的工具</string>
 </resources>

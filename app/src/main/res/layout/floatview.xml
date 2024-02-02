@@ -6,9 +6,9 @@
 
     <TextView
         android:id="@+id/condstext"
-        android:layout_width="78dp"
+        android:layout_width="106dp"
         android:layout_height="22dp"
-        android:text="99:99:99"
+        android:text="99:99:99:999"
         android:textSize="16dp"
         android:gravity="center"
         android:textColor="@color/white"

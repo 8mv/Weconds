@@ -1,4 +1,4 @@
-package cn.wt3.weconds;
+package com.wt3.weconds;
 
 import android.content.Context;
 

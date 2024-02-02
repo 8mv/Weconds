@@ -11,13 +11,13 @@
         android:theme="@style/Theme.Weconds">
 
 
-        <activity android:name=".MainActivity">
+        <activity android:name="cn.wt3.weconds.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />

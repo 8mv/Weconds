@@ -1,72 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:fillViewport="true"
+    android:overScrollMode="always"
+    android:scrollbars="none" >
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/teal_700"
-        tools:ignore="UselessParent">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="cn.wt3.weconds.MainActivity">
 
     <TextView
+        android:id="@+id/titlebar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:background="@color/teal_700"
+        android:gravity="center"
         android:text="@string/hometitle"
-        android:textSize="20sp"
         android:textColor="@color/white"
-        android:textStyle="bold"
-        android:gravity="center"/>
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
-    </LinearLayout>
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="50dp"
+
+    <TextView
+        android:id="@+id/getpermiss"
+        android:layout_width="120dp"
+        android:layout_height="37dp"
+        android:gravity="center"
+        android:layout_below="@+id/titlebar"
+        android:background="@drawable/touchcolor"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:padding="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
         android:text="获取悬浮框权限" />
 
+    <TextView
+        android:id="@+id/stablebt"
+        android:layout_width="120dp"
+        android:layout_height="37dp"
+        android:gravity="center"
+        android:layout_below="@+id/titlebar"
+        android:background="@drawable/touchcolor"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:padding="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/getpermiss"
+        android:text="锁定悬浮框位置" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="10dp"
-        android:text="开启秒数悬浮框" />
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="10dp"
-        android:text="关闭秒数悬浮框" />
+    <TextView
+        android:id="@+id/shownowtime"
+        android:layout_width="120dp"
+        android:layout_height="37dp"
+        android:gravity="center"
+        android:textSize="15dp"
+        android:background="@drawable/touchcolor"
+        android:textColor="@color/white"
+        android:padding="5dp"
+        android:layout_below="@+id/getpermiss"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:text="开启实时浮框" />
 
-    <Button
-        android:id="@+id/safe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="10dp"
-        android:text="隐私保护声明" />
+    <TextView
+        android:id="@+id/countdown"
+        android:layout_width="120dp"
+        android:layout_height="37dp"
+        android:background="@drawable/touchcolor"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_below="@+id/shownowtime"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:text="开启倒计浮框"/>
 
+    <TextView
+        android:id="@+id/closefloat"
+        android:layout_width="120dp"
+        android:layout_height="37dp"
+        android:gravity="center"
+        android:background="@drawable/touchcolor"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:padding="5dp"
+        android:layout_below="@+id/countdown"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:text="关闭悬浮框" />
+
+    <TextView
+        android:id="@+id/setsize"
+        android:layout_width="120dp"
+        android:layout_height="37dp"
+        android:background="@drawable/touchcolor"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:padding="3dp"
+        android:layout_below="@+id/sizenum"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/countdown"
+        android:text="设置浮框大小" />
+
+    <EditText
+        android:id="@+id/sizenum"
+        android:layout_width="120dp"
+        android:layout_height="37dp"
+        android:layout_below="@+id/stablebt"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:textSize="15dp"
+        android:layout_toRightOf="@+id/shownowtime"
+        android:gravity="center"
+        android:padding="3dp"
+        android:background="@drawable/editbk"
+        android:hint="↓ 可填 0~99 ↓"
+        android:maxLength="2"
+        android:numeric="integer" />
+
+
+
+
+    <TextView
+        android:id="@+id/help"
+        android:layout_width="120dp"
+        android:layout_height="37dp"
+        android:background="@drawable/touchcolor"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:layout_below="@+id/setsize"
+        android:layout_toRightOf="@id/closefloat"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:text="帮助与反馈"/>
 
 
     <TextView
         android:id="@+id/devsite"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:textColor="@color/grey"
-        android:text="开发者官网：wt3.cn"
-        android:layout_marginTop="50dp"
-        android:textSize="20sp"
+        android:layout_below="@+id/help"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
         android:gravity="center"
-        android:clickable="true"/>
+        android:text="Dev By Wt3.cn"
+        android:textColor="@color/grey"
+        android:textSize="18sp" />
 
 
+</RelativeLayout>
 
-</LinearLayout>
+    </ScrollView>
